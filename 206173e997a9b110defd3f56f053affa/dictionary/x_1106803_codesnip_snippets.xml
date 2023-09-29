@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="bf86b32197a1f110defd3f56f053afcf" label="Snippets" max_length="40" name="x_1106803_codesnip_snippets" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Code" max_length="1000" name="code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Codesnippet Name" max_length="60" name="codesnippet_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Comment" max_length="1000" name="comment" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Function Type" max_length="40" name="function_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="BusinessRule" value="business_rule"/>
+                <element inactive_on_update="false" label="onChange" value="on_change"/>
+                <element inactive_on_update="false" label="onLoad" value="on_load"/>
+                <element inactive_on_update="false" label="onSubmit" value="on_submit"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Script Type" mandatory="true" max_length="40" name="script_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Clientside" value="clientside"/>
+                <element inactive_on_update="false" label="Serverside" value="serverside"/>
+            </choice>
+        </element>
+    </element>
+</database>
